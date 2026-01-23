@@ -111,6 +111,26 @@
         <p><strong>Call:</strong> <a href="tel:9372219804" style="color:white;">(937) 221-9804</a></p>
     </header>
 
+
+    <section>
+      <h2>Available Phones</h2>
+      <div class="services">
+        <div class="card">
+          <h3>iPhones</h3>
+          <p>Latest models available</p>
+        </div>
+        <div class="card">
+          <h3>Samsungs</h3>
+          <p>All new Samsung phones</p>
+        </div>
+        <div class="card">
+          <h3>Motorola</h3>
+          <p>Affordable and reliable</p>
+        </div>
+      </div>
+    </section>
+
+
     <section>
         <h2>Our Services</h2>
         <div class="services">
@@ -167,3 +187,4 @@
 
 </body>
 </html>
+

@@ -163,16 +163,33 @@
     </section>
 
     <section>
-        <h2>Online Repair Booking</h2>
-        <form name="repair-booking" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="repair-booking">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
-            <input type="text" name="device" placeholder="Device (iPhone, Samsung, etc.)" required>
-            <textarea name="issue" rows="4" placeholder="Describe the issue" required></textarea>
-            <button type="submit">Book Repair</button>
-        </form>
+      <h2>Online Repair Booking</h2>
+      <form name="repair-booking" method="POST" data-netlify="true">
+        <!-- Required hidden input for Netlify -->
+        <input type="hidden" name="form-name" value="repair-booking">
+    
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+    
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+    
+        <label for="device">Device (iPhone, Samsung, etc.)</label>
+        <input type="text" id="device" name="device" placeholder="Device" required>
+    
+        <label for="issue">Describe the Issue</label>
+        <textarea id="issue" name="issue" rows="4" placeholder="Describe the issue" required></textarea>
+    
+        <button type="submit">Book Repair</button>
+    
+        <!-- Success Message -->
+        <p style="display:none;" id="success-message">Thank you! Your appointment has been booked.</p>
+      </form>
     </section>
+
 
     <div class="cta">
         <h2>Need a Repair Today?</h2>
@@ -183,6 +200,16 @@
     <footer>
         © 2026 Eastown Wireless. All rights reserved.
     </footer>
+
+
+<script>
+  const form = document.querySelector('form[name="repair-booking"]');
+  form.addEventListener('submit', function(event) {
+    // Show success message after submission
+    document.getElementById('success-message').style.display = 'block';
+  });
+</script>
+
 
 </body>
 </html>
